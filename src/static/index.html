@@ -12,6 +12,25 @@
       <h2>Extracurricular Activities</h2>
     </header>
 
+    <section id="auth-container" aria-labelledby="auth-heading">
+      <h3 id="auth-heading">Account</h3>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login-email">School email</label>
+          <input type="email" id="login-email" autocomplete="username" required />
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" autocomplete="current-password" required />
+        </div>
+        <button type="submit">Sign in</button>
+      </form>
+      <div id="account-panel" class="hidden">
+        <p id="account-label"></p>
+        <button id="logout-button" type="button">Sign out</button>
+      </div>
+    </section>
+
     <main>
       <section id="activities-container">
         <h3>Available Activities</h3>
@@ -25,10 +44,6 @@
         <h3>Sign Up for an Activity</h3>
         <form id="signup-form">
           <div class="form-group">
-            <label for="email">Student Email:</label>
-            <input type="email" id="email" required placeholder="your-email@mergington.edu" />
-          </div>
-          <div class="form-group">
             <label for="activity">Select Activity:</label>
             <select id="activity" required>
               <option value="">-- Select an activity --</option>
@@ -37,9 +52,10 @@
           </div>
           <button type="submit">Sign Up</button>
         </form>
-        <div id="message" class="hidden"></div>
       </section>
     </main>
+
+    <div id="message" class="hidden" role="status" aria-live="polite"></div>
 
     <footer>
       <p>&copy; 2026 Mergington High School</p>
